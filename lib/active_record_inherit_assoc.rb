@@ -3,7 +3,7 @@ require 'active_record'
 case ActiveRecord::VERSION::MAJOR
 when 4
   ActiveRecord::Associations::Builder::Association.valid_options << :inherit
-when 5
+when 5, 6
   # We can't add options into `valid_options` anymore.
   # Here are the possible solutions:
   #   * monkey patch Assocition::VALID_OPTIONS
